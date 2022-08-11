@@ -18,6 +18,7 @@ def main():
 
         thread = threading.Thread(target=messagesTreatment, args=[client])
         thread.start()
+        server.send('solicitação recebida'.encode('utf-8'))
 
 
 def messagesTreatment(client):
